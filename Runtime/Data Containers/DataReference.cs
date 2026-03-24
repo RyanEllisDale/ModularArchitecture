@@ -10,7 +10,14 @@ namespace ModularArchitecture
         public bool useConstant = true;
         public T constantValue; 
         public DataContainer<T> variable;
-        public T value => useConstant ? constantValue : variable.value;
+
+        public T value 
+        {
+            get {   return useConstant ? constantValue : variable.value; }
+            set {   if (useConstant == true) { constantValue = value; }
+                    else { variable.value = value; } 
+                }
+        }
 
         public DataReference() {}
         public DataReference(T value) 

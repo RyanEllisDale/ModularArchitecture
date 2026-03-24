@@ -5,13 +5,13 @@ using ModularArchitecture;
 #ROOTNAMESPACEBEGIN#
     public enum #SCRIPTNAME#
     {
-        None
+        None,
+	#NOTRIM#
     }
     #NOTRIM#
     [CreateAssetMenu(menuName = "Modular/Enums/New #SCRIPTNAME#")]
     public class Extendable#SCRIPTNAME# : DataContainer<#SCRIPTNAME#>, EnumBase
     {
-        [SerializeField, ExtendEnum]
-        private #SCRIPTNAME# enumValue;
+	#NOTRIM#
     }
 #ROOTNAMESPACEEND#
