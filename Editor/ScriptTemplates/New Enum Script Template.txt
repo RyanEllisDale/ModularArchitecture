@@ -1,0 +1,17 @@
+// Dependancies :
+using UnityEngine;
+using ModularArchitecture;
+#NOTRIM#
+#ROOTNAMESPACEBEGIN#
+    public enum #SCRIPTNAME#
+    {
+        None
+    }
+    #NOTRIM#
+    [CreateAssetMenu(menuName = "Modular/Enums/New #SCRIPTNAME#")]
+    public class Extendable#SCRIPTNAME# : DataContainer<#SCRIPTNAME#>, EnumBase
+    {
+        [SerializeField, ExtendEnum]
+        private #SCRIPTNAME# enumValue;
+    }
+#ROOTNAMESPACEEND#
