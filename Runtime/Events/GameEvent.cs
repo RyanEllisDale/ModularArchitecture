@@ -7,22 +7,24 @@ namespace ModularArchitecture
     [CreateAssetMenu(menuName = "Modular/New Game Event")]
     public class GameEvent : ScriptableObject
     {
-        private List<GameEventListener> listeners;
+        private HashSet<GameEventListenerSerial> listeners = new HashSet<GameEventListenerSerial>();
 
         public void Raise()
         {
-            foreach (GameEventListener listener in listeners)
+            foreach (GameEventListenerSerial listener in listeners)
             {
                 listener.OnEventRaised();
             }
+
+            Debug.Log("Event Raised");
         }    
 
-        public void Subscribe(GameEventListener listener)
+        public void Subscribe(GameEventListenerSerial listener)
         {
             if (listeners.Contains(listener) == false) { listeners.Add(listener); }
         }
 
-        public void UnSubscribe(GameEventListener listener)
+        public void UnSubscribe(GameEventListenerSerial listener)
         {
             if (listeners.Contains(listener) == true) { listeners.Remove(listener); }
         }
