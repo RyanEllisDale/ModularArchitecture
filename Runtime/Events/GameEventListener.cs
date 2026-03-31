@@ -1,26 +1,28 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace ModularArchitecture
+namespace ModularArchitecture 
 {
-    // public class GameEventListener : MonoBehaviour
-    // {
-    //     public GameEvent gameEvent;
-    //     public UnityEvent response;
-
-    //     private void OnEnable() { gameEvent?.Subscribe(this); }
-    //     private void OnDisable() { gameEvent?.UnSubscribe(this); }
-    //     public void OnEventRaised() { response?.Invoke(); }
-    // }
-
     [System.Serializable]
-    public class GameEventListenerSerial
+    public class GameEventListener
     {
         public GameEvent gameEvent;
         public UnityEvent response;
 
-        public void OnEnable() { gameEvent?.Subscribe(this); }
-        public void OnDisable() { gameEvent?.UnSubscribe(this); }
+        public void SubscribeSelf() { gameEvent?.Subscribe(this); }
+        public void UnsubscribeSelf() { gameEvent?.Unsubscribe(this); }
         public void OnEventRaised() { response?.Invoke(); }
+
+        public GameEventListener(GameEvent aGameEvent, UnityAction aUnityAction)
+        {
+            gameEvent = aGameEvent;
+
+            response = new UnityEvent();
+            response.AddListener(aUnityAction);
+
+
+        }
+        public GameEventListener() {}
+
     }
 }
