@@ -32,17 +32,6 @@ namespace ModularArchitecture
             return reference.value;
         }
 
-        //public int CompareTo(DataReference<T> other)
-        //{
-        //    Debug.Log("Comparison Being Made");
-
-
-        //    if (other == null)
-        //        return 1;
-
-        //    return this.value.CompareTo(other.value);
-        //}
-
         public override int CompareTo(DataReferenceBase other)
         {
             Debug.Log("Comparison Being Made");
