@@ -8,6 +8,17 @@ namespace ModularArchitecture.Editor
     [CustomPropertyDrawer(typeof(Condition))]
     public class ConditionDrawer : PropertyDrawer
     {
+        // Helper function to set the reference type dynamically
+        public void EnsureReferenceType(SerializedProperty prop, System.Type t)
+        {
+            object currentObj = prop.managedReferenceValue;
+            if (currentObj == null || currentObj.GetType() != t)
+            {
+                prop.managedReferenceValue = System.Activator.CreateInstance(t);
+            }
+        }
+
+
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
             // Get serialized properties
@@ -45,15 +56,6 @@ namespace ModularArchitecture.Editor
             // Check the selected type
             Type selectedType = (Type)typeProp.enumValueIndex;
 
-            // Helper function to set the reference type dynamically
-            void EnsureReferenceType(SerializedProperty prop, System.Type t)
-            {
-                object currentObj = prop.managedReferenceValue;
-                if (currentObj == null || currentObj.GetType() != t)
-                {
-                    prop.managedReferenceValue = System.Activator.CreateInstance(t);
-                }
-            }
 
             // Map the Type enum to the correct concrete class
             System.Type concreteType = selectedType switch

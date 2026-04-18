@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace ModularArchitecture
@@ -20,6 +21,7 @@ namespace ModularArchitecture
         Bool
     }
 
+
     [System.Serializable]
     public class Condition 
     {
@@ -29,6 +31,25 @@ namespace ModularArchitecture
         [SerializeReference] private DataReferenceBase subject = new IntReference();
         [SerializeReference] private DataReferenceBase target = new IntReference();
         
-        public bool Evaluate() { return true; }
+        public bool Evaluate()
+        {
+            switch (comparison)
+            {
+                case Comparison.Equal: return subject == target; break;
+                case Comparison.NotEqual: return subject != target; break;
+                case Comparison.Less: return subject < target; break;
+                case Comparison.LessEqual: return subject <= target; break;
+                case Comparison.Greater: return subject > target; break;
+                case Comparison.GreaterEqual: return subject >= target; break;
+
+                default: Debug.LogError("Unhandled Condition: Modular Architecture: Condition: Evaluate\nCondition: " + name + " Type: " + type + " Comparison: " + comparison); break;
+            }
+            
+            return false; 
+        }
+
+
+
+
     }
 }

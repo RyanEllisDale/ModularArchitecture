@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,7 @@ using UnityEngine;
 namespace ModularArchitecture
 {
     [System.Serializable]
-    public class DataReference<T> : DataReferenceBase
+    public class DataReference<T> : DataReferenceBase where T : IComparable<T>
     {
         public bool useConstant = true;
         public T constantValue; 
@@ -30,6 +31,34 @@ namespace ModularArchitecture
         {
             return reference.value;
         }
+
+        //public int CompareTo(DataReference<T> other)
+        //{
+        //    Debug.Log("Comparison Being Made");
+
+
+        //    if (other == null)
+        //        return 1;
+
+        //    return this.value.CompareTo(other.value);
+        //}
+
+        public override int CompareTo(DataReferenceBase other)
+        {
+            Debug.Log("Comparison Being Made");
+
+            if (other is DataReference<T> typed)
+                return this.value.CompareTo(typed.value);
+
+
+            throw new ArgumentException("Cannot compare different DataReference types");
+        }
+
+
+
+
+
+
     }
 
     [System.Serializable]
