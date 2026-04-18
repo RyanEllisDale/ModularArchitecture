@@ -1,6 +1,5 @@
 // Dependancies :
 using UnityEngine;
-using ModularArchitecture;
 #NOTRIM#
 #ROOTNAMESPACEBEGIN#
     public enum #SCRIPTNAME#
@@ -10,8 +9,10 @@ using ModularArchitecture;
     }
     #NOTRIM#
     [CreateAssetMenu(menuName = "Modular/Enums/New #SCRIPTNAME#")]
-    public class Extendable#SCRIPTNAME# : DataContainer<#SCRIPTNAME#>, EnumBase
+    public class Extendable#SCRIPTNAME#
     {
+		[ExtendEnum]
+        public NewEnum value;
 	#NOTRIM#
     }
 #ROOTNAMESPACEEND#
