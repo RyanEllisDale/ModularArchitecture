@@ -1,4 +1,5 @@
 // Dependancies : 
+using System;
 using UnityEngine;
 
 // Resources :
@@ -29,7 +30,7 @@ namespace ModularArchitecture
     /// Condition has it's own drawer that will set the subject and target to be references of the given Value Type. 
     /// </summary>
     [System.Serializable]
-    public class Condition 
+    public class Condition : IComparable<Condition>
     {
         // Data Members :
         [SerializeField] private string name;
@@ -64,6 +65,13 @@ namespace ModularArchitecture
             return false; 
         }
 
+        public int CompareTo(Condition other)
+        {
+            throw new NotImplementedException();
+        }
+
+        // Debugging : 
+        
         #if UNITY_EDITOR
         /// <summary>
         /// Debug Function for logging the evaluation of the condition. 
@@ -76,5 +84,6 @@ namespace ModularArchitecture
             return evaluationResult;
         }
         #endif
+
     }
 }

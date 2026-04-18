@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca041e27f3eb6744dbd25bb2a0802f0d, type: 3}
+  m_Name: ConditionA
+  m_EditorClassIdentifier: 
+  value:
+    name: Compare Bools
+    type: 3
+    comparison: 0
+    subject:
+      rid: 7869257917373087798
+    target:
+      rid: 7869257917373087799
+  references:
+    version: 2
+    RefIds:
+    - rid: 7869257917373087798
+      type: {class: BoolReference, ns: ModularArchitecture, asm: com.ryanellisdale.modular-architecture}
+      data:
+        useConstant: 0
+        constantValue: 0
+        variable: {fileID: 11400000, guid: 03e39d694b474d04f800881a12ca4ff0, type: 2}
+    - rid: 7869257917373087799
+      type: {class: BoolReference, ns: ModularArchitecture, asm: com.ryanellisdale.modular-architecture}
+      data:
+        useConstant: 0
+        constantValue: 0
+        variable: {fileID: 11400000, guid: 19736990044bb824792c80b7f7015264, type: 2}

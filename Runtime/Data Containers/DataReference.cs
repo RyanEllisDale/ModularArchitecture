@@ -59,5 +59,6 @@ namespace ModularArchitecture
     [System.Serializable] public class StringReference : DataReference<string> {}
     [System.Serializable] public class IntReference : DataReference<int> {}
     [System.Serializable] public class BoolReference : DataReference<bool> {}
+    [System.Serializable] public class ConditionReference : DataReference<Condition> {}
 
 }

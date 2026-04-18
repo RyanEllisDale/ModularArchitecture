@@ -1,5 +1,5 @@
 // Dependancies : 
-#if UNITY_EDITOR
+//#if UNITY_EDITOR
 using UnityEditor;
 using ModularArchitecture;
 using UnityEngine;
@@ -10,7 +10,7 @@ using UnityEngine;
 public class ConditionTester : MonoBehaviour
 {
     // Data Members : 
-    [SerializeField] private Condition condition;
+    [SerializeField] private DataReference<Condition> condition;
     [SerializeField] private KeyCode key;
     [SerializeField] private bool onStart = false;
 
@@ -35,8 +35,11 @@ public class ConditionTester : MonoBehaviour
     private void Activate()
     {
         Debug.Log("Condition Tester Activated");
-        condition.DEBUGPrintEvaluation();
+
+        condition.value.DEBUGPrintEvaluation();
+        //condition.value.Evaluate();
+        //condition.value.DEBUGPrintEvaluation();
     }
 
 }
-#endif
+//#endif
