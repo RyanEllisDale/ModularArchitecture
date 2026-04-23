@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ModularArchitecture
 {
-    [CreateAssetMenu(menuName = "Modular/New Int")]
+    [CreateAssetMenu(fileName = "New Int Variable", menuName = "Modular/Data/New Int", order = 0)]
     public class IntVariable : DataContainer<int> {}
 }
 

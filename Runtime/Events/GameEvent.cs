@@ -9,7 +9,7 @@ namespace ModularArchitecture
     /// Is a scriptable object asset file and thus works on its own without scene dependancy. <br/>
     /// Can only contain unique listeners, duplicate listeners will be ignored for performance and scale-ability.
     /// </summary>
-    [CreateAssetMenu(menuName = "Modular/New Game Event")]
+    [CreateAssetMenu(fileName = "New Game Event", menuName = "Modular/Data/New Game Event", order = 1)]
     public class GameEvent : ScriptableObject
     {
         // Data Members :

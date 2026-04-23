@@ -1,0 +1,16 @@
+// Dependancies :
+using UnityEngine;
+#NOTRIM#
+#ROOTNAMESPACEBEGIN#
+    public enum #SCRIPTNAME#
+    {
+        None,
+	#NOTRIM#
+    }
+    #NOTRIM#
+    [CreateAssetMenu(fileName = "#SCRIPTNAME#", menuName = "Modular/Enums/Enum : #SCRIPTNAME#", order = 1)]
+    public class Extendable#SCRIPTNAME# : ExtendableEnum<#SCRIPTNAME#>
+    {
+	    #NOTRIM#
+    }
+#ROOTNAMESPACEEND#

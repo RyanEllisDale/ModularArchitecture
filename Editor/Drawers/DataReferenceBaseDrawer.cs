@@ -14,28 +14,57 @@ namespace ModularArchitecture.Editor
     {
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
-            // Data : 
-            // Stores the SerializedProperties of Data Reference ( missing from base ) but will be in wrapper children
             SerializedProperty useConstant = property.FindPropertyRelative("useConstant");
             SerializedProperty constant = property.FindPropertyRelative("constantValue");
             SerializedProperty variable = property.FindPropertyRelative("variable");
 
+            SerializedProperty activeProp = useConstant.boolValue ? constant : variable;
+
             const float buttonWidth = 70;
-            const float spacing = 10;
+            const float spacing = 5;
 
-            // Drawing the default fields : 
-            Rect labelRect = new Rect(position.x, position.y, EditorGUIUtility.labelWidth, position.height);
-            Rect buttonRect = new Rect(position.x + EditorGUIUtility.labelWidth, position.y, buttonWidth - spacing, position.height);
-            Rect fieldRect = new Rect(position.x + EditorGUIUtility.labelWidth + buttonWidth, position.y, position.width - EditorGUIUtility.labelWidth - buttonWidth, position.height);
+            float lineHeight = EditorGUIUtility.singleLineHeight;
+
+            Rect labelRect = new Rect(position.x, position.y, EditorGUIUtility.labelWidth, lineHeight);
+            Rect buttonRect = new Rect(position.x + EditorGUIUtility.labelWidth, position.y, buttonWidth, lineHeight);
+
+            float propHeight = EditorGUI.GetPropertyHeight(activeProp, true);
+
+            bool multiline = propHeight > lineHeight;
+
             EditorGUI.LabelField(labelRect, label);
-            
-            // Button Toggle : 
-            useConstant.boolValue = GUI.Toggle(buttonRect, useConstant.boolValue, useConstant.boolValue ? "Const" : "Ref", EditorStyles.miniButton);
-            if (useConstant.boolValue)
-                EditorGUI.PropertyField(fieldRect, constant, GUIContent.none);
-            else
-                EditorGUI.PropertyField(fieldRect, variable, GUIContent.none);
 
+            useConstant.boolValue = GUI.Toggle(
+                buttonRect,
+                useConstant.boolValue,
+                useConstant.boolValue ? "Const" : "Ref",
+                EditorStyles.miniButton
+            );
+
+            if (multiline)
+            {
+                // Draw property BELOW
+                Rect fieldRect = new Rect(
+                    position.x,
+                    position.y + lineHeight + EditorGUIUtility.standardVerticalSpacing,
+                    position.width,
+                    propHeight
+                );
+
+                EditorGUI.PropertyField(fieldRect, activeProp, true);
+            }
+            else
+            {
+                // Draw property INLINE
+                Rect fieldRect = new Rect(
+                    position.x + EditorGUIUtility.labelWidth + buttonWidth + spacing,
+                    position.y,
+                    position.width - EditorGUIUtility.labelWidth - buttonWidth - spacing,
+                    lineHeight
+                );
+
+                EditorGUI.PropertyField(fieldRect, activeProp, GUIContent.none);
+            }
         }
 
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
@@ -44,17 +73,20 @@ namespace ModularArchitecture.Editor
             SerializedProperty constant = property.FindPropertyRelative("constantValue");
             SerializedProperty variable = property.FindPropertyRelative("variable");
 
-            float height = 0;
+            SerializedProperty activeProp = useConstant.boolValue ? constant : variable;
 
-            if (useConstant.boolValue == true)
+            float baseHeight = EditorGUIUtility.singleLineHeight;
+
+            float propHeight = EditorGUI.GetPropertyHeight(activeProp, true);
+
+            // If it's more than one line, stack vertically
+            if (propHeight > baseHeight)
             {
-                height = height + EditorGUI.GetPropertyHeight(constant);
-                return height;
+                return baseHeight + propHeight + EditorGUIUtility.standardVerticalSpacing;
             }
 
-            height = height + EditorGUI.GetPropertyHeight(variable);
-
-            return height;
+            return baseHeight;
         }
+
     }
 }
