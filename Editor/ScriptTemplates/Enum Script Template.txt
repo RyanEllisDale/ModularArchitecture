@@ -1,6 +1,8 @@
 // Dependancies :
 using UnityEngine;
+using ModularArchitecture;
 #NOTRIM#
+// Namespace : 
 #ROOTNAMESPACEBEGIN#
     public enum #SCRIPTNAME#
     {

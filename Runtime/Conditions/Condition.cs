@@ -33,15 +33,15 @@ namespace ModularArchitecture
     public class Condition : IComparable<Condition>
     {
         // Data Members :
-        [SerializeField] private string name;
+        public string id;
         [Tooltip("The wrapper type for your reference, must be set to the correct type before you can add variable references to subject and target")]
-        [SerializeField] private ConditionValueType type = ConditionValueType.Int;
+        [SerializeField] private ConditionValueType _type = ConditionValueType.Int;
         [Tooltip("The comparison operator to use (standard IComparable arithmetic operators)")]
-        [SerializeField] private ConditionComparison comparison = ConditionComparison.Equal;
+        [SerializeField] private ConditionComparison _comparison = ConditionComparison.Equal;
         [Tooltip("The subject will be compared to the target, so subject should be used as the current value whilst target is considered the goal value")]
-        [SerializeReference] private DataReferenceBase subject = new IntReference();
+        [SerializeReference] private DataReferenceBase _subject = new IntReference();
         [Tooltip("The subject will be compared to the target, so subject should be used as the current value whilst target is considered the goal value")]
-        [SerializeReference] private DataReferenceBase target = new IntReference();
+        [SerializeReference] private DataReferenceBase _target = new IntReference();
 
         /// <summary>
         /// Evaluates the condition by comparing the subject against the target <br/>
@@ -50,16 +50,16 @@ namespace ModularArchitecture
         /// <returns>Returns true or false depending on wether the condition's evaluation was successful or not</returns>
         public bool Evaluate()
         {
-            switch (comparison)
+            switch (_comparison)
             {
-                case ConditionComparison.Equal: return subject == target; break;
-                case ConditionComparison.NotEqual: return subject != target; break;
-                case ConditionComparison.Less: return subject < target; break;
-                case ConditionComparison.LessEqual: return subject <= target; break;
-                case ConditionComparison.Greater: return subject > target; break;
-                case ConditionComparison.GreaterEqual: return subject >= target; break;
+                case ConditionComparison.Equal: return _subject == _target; break;
+                case ConditionComparison.NotEqual: return _subject != _target; break;
+                case ConditionComparison.Less: return _subject < _target; break;
+                case ConditionComparison.LessEqual: return _subject <= _target; break;
+                case ConditionComparison.Greater: return _subject > _target; break;
+                case ConditionComparison.GreaterEqual: return _subject >= _target; break;
 
-                default: Debug.LogError("Unhandled Condition: Modular Architecture: Condition: Evaluate\nCondition: " + name + " Type: " + type + " Comparison: " + comparison); break;
+                default: Debug.LogError("Unhandled Condition: Modular Architecture: Condition: Evaluate\nCondition: " + id + " Type: " + _type + " Comparison: " + _comparison); break;
             }
             
             return false; 

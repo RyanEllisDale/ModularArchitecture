@@ -32,11 +32,11 @@ namespace ModularArchitecture.Editor
 
             // Data : 
             // Store the serialized properties for the conditions so we can render and manipulate them
-            SerializedProperty nameProp = property.FindPropertyRelative("name");
-            SerializedProperty typeProp = property.FindPropertyRelative("type");
-            SerializedProperty comparisonProp = property.FindPropertyRelative("comparison");
-            SerializedProperty subjectProp = property.FindPropertyRelative("subject");
-            SerializedProperty targetProp = property.FindPropertyRelative("target");
+            SerializedProperty idProp = property.FindPropertyRelative("id");
+            SerializedProperty typeProp = property.FindPropertyRelative("_type");
+            SerializedProperty comparisonProp = property.FindPropertyRelative("_comparison");
+            SerializedProperty subjectProp = property.FindPropertyRelative("_subject");
+            SerializedProperty targetProp = property.FindPropertyRelative("_target");
             
             // Default Types:
             // if the target or subject is null default them to IntReferences
@@ -46,12 +46,12 @@ namespace ModularArchitecture.Editor
             if (targetProp.managedReferenceValue == null)
                 targetProp.managedReferenceValue = new IntReference();
 
-            // Drawing non-subject/target Data Fields ( Name, Type, Comparison ) 
+            // Drawing non-subject/target Data Fields ( id, Type, Comparison ) 
             // Indents the field after each line for rendering space
             EditorGUI.indentLevel++;
             position.y += EditorGUIUtility.singleLineHeight + 2;
-            EditorGUI.PropertyField(position, nameProp);
-            position.y += EditorGUI.GetPropertyHeight(nameProp);
+            EditorGUI.PropertyField(position, idProp);
+            position.y += EditorGUI.GetPropertyHeight(idProp);
             EditorGUI.PropertyField(position, typeProp);
             position.y += EditorGUI.GetPropertyHeight(targetProp) + 2;
             EditorGUI.PropertyField(position, comparisonProp);
@@ -68,7 +68,7 @@ namespace ModularArchitecture.Editor
                 case ConditionValueType.String: concreteType = typeof(StringReference); break;
                 case ConditionValueType.Bool: concreteType = typeof(BoolReference); break;
                 default: Debug.LogError("Unhandled ConditionValueType: Modular Architecture: ConditionDrawer: Drawing\n" +
-                        "Condition: " + nameProp.ToString() + " Type: " + typeProp.ToString() + " Comparison: " + comparisonProp.ToString()); break;
+                        "Condition: " + idProp.ToString() + " Type: " + typeProp.ToString() + " Comparison: " + comparisonProp.ToString()); break;
             }
 
             // Ensure subject and target have the correct concrete type
@@ -89,15 +89,15 @@ namespace ModularArchitecture.Editor
         {
             if (!property.isExpanded) return EditorGUIUtility.singleLineHeight;
 
-            SerializedProperty nameProp = property.FindPropertyRelative("name");
-            SerializedProperty typeProp = property.FindPropertyRelative("type");
-            SerializedProperty comparisonProp = property.FindPropertyRelative("comparison");
-            SerializedProperty subjectProp = property.FindPropertyRelative("subject");
-            SerializedProperty targetProp = property.FindPropertyRelative("target");
+            SerializedProperty idProp = property.FindPropertyRelative("id");
+            SerializedProperty typeProp = property.FindPropertyRelative("_type");
+            SerializedProperty comparisonProp = property.FindPropertyRelative("_comparison");
+            SerializedProperty subjectProp = property.FindPropertyRelative("_subject");
+            SerializedProperty targetProp = property.FindPropertyRelative("_target");
 
             float height = 0;
             height += EditorGUIUtility.singleLineHeight + 2; // foldout
-            height += EditorGUI.GetPropertyHeight(nameProp) + 2; // name 
+            height += EditorGUI.GetPropertyHeight(idProp) + 2; // id 
             height += EditorGUIUtility.singleLineHeight + 2; // type
             height += EditorGUIUtility.singleLineHeight + 2; // comparison
             height += EditorGUI.GetPropertyHeight(subjectProp) + 2; // subject

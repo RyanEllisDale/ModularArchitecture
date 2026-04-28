@@ -13,13 +13,13 @@ namespace ModularArchitecture
     public class GameEvent : ScriptableObject
     {
         // Data Members :
-        private HashSet<GameEventListener> listeners = new HashSet<GameEventListener>();
+        private HashSet<GameEventListener> _listeners = new HashSet<GameEventListener>();
 
         // Data Methods : 
         [ContextMenu("Raise Event")]
         public void Raise()
         {
-            foreach (GameEventListener listener in listeners)
+            foreach (GameEventListener listener in _listeners)
             {
                 listener.OnEventRaised();
             }
@@ -27,12 +27,12 @@ namespace ModularArchitecture
 
         public void Subscribe(GameEventListener listener)
         {
-            if (listeners.Contains(listener) == false) { listeners.Add(listener); }
+            if (_listeners.Contains(listener) == false) { _listeners.Add(listener); }
         }
 
         public void Unsubscribe(GameEventListener listener)
         {
-            if (listeners.Contains(listener) == true) { listeners.Remove(listener); }
+            if (_listeners.Contains(listener) == true) { _listeners.Remove(listener); }
         }
     }
 

@@ -10,15 +10,15 @@ namespace ModularArchitecture
     public class GameEventListenerScript : MonoBehaviour
     {
         // Data Members : 
-        [SerializeField] private GameEventListener listener;
+        [SerializeField] private GameEventListener _listener;
 
         // Data Functions:
         // Subscribes and Unsubscribes itself in scope to the given event. 
         [ContextMenu("Manual Subscription to Game Event")]
-        public void OnEnable() { listener.SubscribeSelf(); }
+        public void OnEnable() { _listener.SubscribeSelf(); }
         [ContextMenu("Manual Unsubscription to Game Event")]
-        public void OnDisable() { listener.UnsubscribeSelf(); }
+        public void OnDisable() { _listener.UnsubscribeSelf(); }
         [ContextMenu("Force Invoke")]
-        public void OnEventRaised() { listener.OnEventRaised(); }
+        public void OnEventRaised() { _listener.OnEventRaised(); }
     }
 }
