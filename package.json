@@ -3,7 +3,7 @@
     "displayName": "Modular Architecture",
     "version": "1.0.0",
     "description": "Modular Objects and Scripts",
-    "documentationURL": "Documentation~/Doxygen/html/index.html",
+    "documentationUrl": "file:Documentation~/Doxygen/html/index.html",
     "unity": "2019.1",
     "dependencies": {},
     "license": "MIT",
