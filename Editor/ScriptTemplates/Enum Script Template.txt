@@ -1,6 +1,6 @@
 // Dependancies :
 using UnityEngine;
-using ModularArchitecture;
+using ModularArchitecture.Enums;
 #NOTRIM#
 // Namespace : 
 #ROOTNAMESPACEBEGIN#
