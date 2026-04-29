@@ -1,7 +1,7 @@
 // Dependancies : 
 using UnityEngine;
 
-namespace ModularArchitecture
+namespace ModularArchitecture.Events
 {
     /// <summary>
     /// MonoBehaviour script class for serialized GameEventListener <br/>

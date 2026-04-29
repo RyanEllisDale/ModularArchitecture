@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ModularArchitecture
+namespace ModularArchitecture.Events
 {
     /// <summary>
     /// GameEvent object, when raised it will trigger responses from all listeners, <br/>

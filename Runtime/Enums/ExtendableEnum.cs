@@ -1,7 +1,7 @@
 // Dependancies : 
 using UnityEngine;
 
-namespace ModularArchitecture
+namespace ModularArchitecture.Enums
 {
     /// <summary>
     /// A modular enum container based on Cory Koseck's Extendable Enums pattern. <br/>

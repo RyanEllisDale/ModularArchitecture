@@ -1,7 +1,7 @@
 // Dependancies :
 using UnityEngine;
 
-namespace ModularArchitecture
+namespace ModularArchitecture.Data
 {
     /// <summary>
     /// A Asset File containing a value of any given type <br/>

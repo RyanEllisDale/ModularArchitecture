@@ -1,6 +1,7 @@
 // Dependancies : 
 using UnityEditor;
 using UnityEngine;
+using ModularArchitecture.Data;
 
 namespace ModularArchitecture.Editor
 {

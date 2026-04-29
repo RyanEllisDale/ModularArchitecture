@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace ModularArchitecture 
+namespace ModularArchitecture.Events
 {
     /// <summary>
     /// Serialized Event Listener for scripts and classes to reference and activate for event responses <br/>

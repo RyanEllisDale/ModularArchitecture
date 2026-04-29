@@ -1,11 +1,12 @@
 // Dependancies : 
 using System;
 using UnityEngine;
+using ModularArchitecture.Data;
 
 // Resources :
 // https://discussions.unity.com/t/basic-ai-modular-conditions/898833
 
-namespace ModularArchitecture
+namespace ModularArchitecture.Conditions
 {
     public enum ConditionComparison
     {

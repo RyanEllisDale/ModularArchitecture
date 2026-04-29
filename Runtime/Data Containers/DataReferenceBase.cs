@@ -4,7 +4,7 @@ using System;
 // Resources : 
 // https://learn.microsoft.com/en-us/dotnet/api/system.icomparable-1?view=net-10.0
 
-namespace ModularArchitecture
+namespace ModularArchitecture.Data
 {
     /// <summary>
         /// DataRefernceBase is the base class used to draw, overload, and compare for DataRefence <br/>

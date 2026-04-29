@@ -1,45 +1,49 @@
 // Dependancies : 
-//#if UNITY_EDITOR
+#if UNITY_EDITOR
 using UnityEditor;
-using ModularArchitecture;
+using ModularArchitecture.Conditions;
+using ModularArchitecture.Data;
 using UnityEngine;
 
-/// <summary>
-/// EDITOR ONLY : Small Sample Script that takes an input and tests a given condition. <br/>
-/// </summary>
-public class ConditionTester : MonoBehaviour
+namespace ModularArchitecture.Testing
 {
-    // Data Members : 
-    [SerializeField] private DataReference<Condition> condition;
-    [SerializeField] private KeyCode key;
-    [SerializeField] private bool onStart = false;
-
-    // Data Methods : 
-    public void Start()
+    /// <summary>
+    /// EDITOR ONLY : Small Sample Script that takes an input and tests a given condition. <br/>
+    /// </summary>
+    public class ConditionTester : MonoBehaviour
     {
-        if (onStart == true)
+        // Data Members : 
+        [SerializeField] private DataReference<Condition> condition;
+        [SerializeField] private KeyCode key;
+        [SerializeField] private bool onStart = false;
+
+        // Data Methods : 
+        public void Start()
         {
-            Activate();
+            if (onStart == true)
+            {
+                Activate();
+            }
         }
-    }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(key) == true)
+        void Update()
         {
-            Activate();
+            if (Input.GetKeyDown(key) == true)
+            {
+                Activate();
+            }
         }
+
+        [ContextMenu("Print Condition Evaluation")]
+        private void Activate()
+        {
+            Debug.Log("Condition Tester Activated");
+
+            condition.value.DEBUGPrintEvaluation();
+            //condition.value.Evaluate();
+            //condition.value.DEBUGPrintEvaluation();
+        }
+
     }
-
-    [ContextMenu("Print Condition Evaluation")]
-    private void Activate()
-    {
-        Debug.Log("Condition Tester Activated");
-
-        condition.value.DEBUGPrintEvaluation();
-        //condition.value.Evaluate();
-        //condition.value.DEBUGPrintEvaluation();
-    }
-
 }
-//#endif
+#endif

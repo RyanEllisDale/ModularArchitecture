@@ -1,3 +1,5 @@
+@mainpage Modular Architecture
+
 # Package Template - Documentation
 
 ## Summary
@@ -111,4 +113,4 @@ This pacakge template aims to be provide the structure / layout for all fundeman
 
 [GitHub Repo](https://github.com/RyanEllisDale/PackageTemplate)
 
-# Thank You For Reading 
+## Thank You For Reading 

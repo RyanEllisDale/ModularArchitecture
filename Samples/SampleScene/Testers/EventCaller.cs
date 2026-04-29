@@ -1,7 +1,9 @@
-using ModularArchitecture;
+#if UNITY_EDITOR
+using UnityEditor;
+using ModularArchitecture.Events;
 using UnityEngine;
 
-namespace AbilitySystem
+namespace ModularArchitecture.Testing
 {
     public class EventCaller : MonoBehaviour
     {
@@ -32,3 +34,4 @@ namespace AbilitySystem
         }
     }
 }
+#endif

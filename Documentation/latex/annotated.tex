@@ -1,0 +1,49 @@
+\doxysection{Class List}
+Here are the classes, structs, unions and interfaces with brief descriptions:\+\begin{DoxyCompactList}
+\item\contentsline{section}{\doxymbox{\hyperlink{class_modular_architecture_1_1_data_1_1_bool_reference}{Modular\+Architecture.\+Data.\+Bool\+Reference}} }{\pageref{class_modular_architecture_1_1_data_1_1_bool_reference}}{}
+\item\contentsline{section}{\doxymbox{\hyperlink{class_modular_architecture_1_1_data_1_1_bool_variable}{Modular\+Architecture.\+Data.\+Bool\+Variable}} }{\pageref{class_modular_architecture_1_1_data_1_1_bool_variable}}{}
+\item\contentsline{section}{\doxymbox{\hyperlink{class_modular_architecture_1_1_conditions_1_1_condition}{Modular\+Architecture.\+Conditions.\+Condition}} \\*Serialized \doxylink{class_modular_architecture_1_1_conditions_1_1_condition}{Condition} Class that will compare two references together based on a given comparison operator. ~\newline
+ \doxylink{class_modular_architecture_1_1_conditions_1_1_condition}{Condition} has it\textquotesingle{}s own drawer that will set the subject and target to be references of the given Value Type }{\pageref{class_modular_architecture_1_1_conditions_1_1_condition}}{}
+\item\contentsline{section}{\doxymbox{\hyperlink{class_modular_architecture_1_1_editor_1_1_condition_drawer}{Modular\+Architecture.\+Editor.\+Condition\+Drawer}} }{\pageref{class_modular_architecture_1_1_editor_1_1_condition_drawer}}{}
+\item\contentsline{section}{\doxymbox{\hyperlink{class_modular_architecture_1_1_data_1_1_condition_reference}{Modular\+Architecture.\+Data.\+Condition\+Reference}} }{\pageref{class_modular_architecture_1_1_data_1_1_condition_reference}}{}
+\item\contentsline{section}{\doxymbox{\hyperlink{class_modular_architecture_1_1_data_1_1_condition_variable}{Modular\+Architecture.\+Data.\+Condition\+Variable}} }{\pageref{class_modular_architecture_1_1_data_1_1_condition_variable}}{}
+\item\contentsline{section}{\doxymbox{\hyperlink{class_modular_architecture_1_1_data_1_1_data_container-1-g}{Modular\+Architecture.\+Data.\+Data\+Container$<$ T $>$}} \\*A Asset File containing a value of any given type ~\newline
+ Used for modular /\+ data-\/driven design, and referenced in Data\+Reference. ~\newline
+ Data\+Container is an abstract class because Unity cannot make generic Scriptable Objects ~\newline
+ Any Child of Data\+Container ( different types ) should be made wrapper children }{\pageref{class_modular_architecture_1_1_data_1_1_data_container-1-g}}{}
+\item\contentsline{section}{\doxymbox{\hyperlink{class_modular_architecture_1_1_data_1_1_data_reference-1-g}{Modular\+Architecture.\+Data.\+Data\+Reference$<$ T $>$}} \\*Data\+Reference contains either a constant value or points to a data container asset in the project ~\newline
+ It is used in place of default types to reference variable objects and allow for implicit comparisons. ~\newline
+ It contains types that are comparable ( consist of IComperable ), so that custom types can be made ~\newline
+ }{\pageref{class_modular_architecture_1_1_data_1_1_data_reference-1-g}}{}
+\item\contentsline{section}{\doxymbox{\hyperlink{class_modular_architecture_1_1_data_1_1_data_reference_base}{Modular\+Architecture.\+Data.\+Data\+Reference\+Base}} \\*Data\+Refernce\+Base is the base class used to draw, overload, and compare for Data\+Refence ~\newline
+ Data\+Reference is a generic templated type and thus cannot be the target of property drawers or comparisons so \doxylink{class_modular_architecture_1_1_data_1_1_data_reference_base}{Data\+Reference\+Base} is used instead ~\newline
+ \doxylink{class_modular_architecture_1_1_data_1_1_data_reference_base}{Data\+Reference\+Base} contains the base == equality overloads that Data\+Reference needs to overwrite so it\textquotesingle{}s values can be compared to other References ~\newline
+ }{\pageref{class_modular_architecture_1_1_data_1_1_data_reference_base}}{}
+\item\contentsline{section}{\doxymbox{\hyperlink{class_modular_architecture_1_1_editor_1_1_data_reference_drawer}{Modular\+Architecture.\+Editor.\+Data\+Reference\+Drawer}} }{\pageref{class_modular_architecture_1_1_editor_1_1_data_reference_drawer}}{}
+\item\contentsline{section}{\doxymbox{\hyperlink{class_modular_architecture_1_1_enums_1_1_extendable_enum-1-g}{Modular\+Architecture.\+Enums.\+Extendable\+Enum$<$ T $>$}} \\*A modular enum container based on Cory Koseck\textquotesingle{}s Extendable \doxylink{namespace_modular_architecture_1_1_enums}{Enums} pattern. ~\newline
+ Allows enum values to be represented as Scriptable\+Objects, enabling designers to extend enum‑like systems without modifying source code. ~\newline
+~\newline
+ Contains :\+ ~\newline
+ {\bfseries{-\/ value :\+}} The enum value stored in this asset. ~\newline
+ }{\pageref{class_modular_architecture_1_1_enums_1_1_extendable_enum-1-g}}{}
+\item\contentsline{section}{\doxymbox{\hyperlink{class_extend_enum_attribute}{Extend\+Enum\+Attribute}} }{\pageref{class_extend_enum_attribute}}{}
+\item\contentsline{section}{\doxymbox{\hyperlink{class_extend_enum_drawer}{Extend\+Enum\+Drawer}} }{\pageref{class_extend_enum_drawer}}{}
+\item\contentsline{section}{\doxymbox{\hyperlink{class_modular_architecture_1_1_data_1_1_float_reference}{Modular\+Architecture.\+Data.\+Float\+Reference}} }{\pageref{class_modular_architecture_1_1_data_1_1_float_reference}}{}
+\item\contentsline{section}{\doxymbox{\hyperlink{class_modular_architecture_1_1_data_1_1_float_variable}{Modular\+Architecture.\+Data.\+Float\+Variable}} }{\pageref{class_modular_architecture_1_1_data_1_1_float_variable}}{}
+\item\contentsline{section}{\doxymbox{\hyperlink{class_modular_architecture_1_1_events_1_1_game_event}{Modular\+Architecture.\+Events.\+Game\+Event}} \\*\doxylink{class_modular_architecture_1_1_events_1_1_game_event}{Game\+Event} object, when raised it will trigger responses from all listeners, ~\newline
+ Is a scriptable object asset file and thus works on its own without scene dependancy. ~\newline
+ Can only contain unique listeners, duplicate listeners will be ignored for performance and scale-\/ability }{\pageref{class_modular_architecture_1_1_events_1_1_game_event}}{}
+\item\contentsline{section}{\doxymbox{\hyperlink{class_modular_architecture_1_1_events_1_1_game_event_listener}{Modular\+Architecture.\+Events.\+Game\+Event\+Listener}} \\*Serialized Event Listener for scripts and classes to reference and activate for event responses ~\newline
+ Subscribes to a \doxylink{class_modular_architecture_1_1_events_1_1_game_event}{Game\+Event} Asset and when that event is raised it will invoke it\textquotesingle{}s given \doxylink{class_modular_architecture_1_1_events_1_1_game_event_listener_a170d8a901a619a91543c250f06124f9a}{response(s)} ~\newline
+ Contains a Constructor so it can reference \doxylink{class_modular_architecture_1_1_events_1_1_game_event}{Game\+Event} data assets in the Unity Resources Folder ~\newline
+ Used as the listener for \doxylink{class_modular_architecture_1_1_events_1_1_game_event_listener_script}{Game\+Event\+Listener\+Script} ~\newline
+ }{\pageref{class_modular_architecture_1_1_events_1_1_game_event_listener}}{}
+\item\contentsline{section}{\doxymbox{\hyperlink{class_modular_architecture_1_1_events_1_1_game_event_listener_script}{Modular\+Architecture.\+Events.\+Game\+Event\+Listener\+Script}} \\*Mono\+Behaviour script class for serialized \doxylink{class_modular_architecture_1_1_events_1_1_game_event_listener}{Game\+Event\+Listener} ~\newline
+ Allows for component-\/based use of \doxylink{class_modular_architecture_1_1_events_1_1_game_event_listener}{Game\+Event\+Listener} within scene, so \doxylink{class_modular_architecture_1_1_events_1_1_game_event_listener}{Game\+Event\+Listener} works in assets and scenes }{\pageref{class_modular_architecture_1_1_events_1_1_game_event_listener_script}}{}
+\item\contentsline{section}{\doxymbox{\hyperlink{class_modular_architecture_1_1_data_1_1_int_reference}{Modular\+Architecture.\+Data.\+Int\+Reference}} }{\pageref{class_modular_architecture_1_1_data_1_1_int_reference}}{}
+\item\contentsline{section}{\doxymbox{\hyperlink{class_modular_architecture_1_1_data_1_1_int_variable}{Modular\+Architecture.\+Data.\+Int\+Variable}} }{\pageref{class_modular_architecture_1_1_data_1_1_int_variable}}{}
+\item\contentsline{section}{\doxymbox{\hyperlink{class_extend_enum_drawer_1_1_new_value_popup}{Extend\+Enum\+Drawer.\+New\+Value\+Popup}} }{\pageref{class_extend_enum_drawer_1_1_new_value_popup}}{}
+\item\contentsline{section}{\doxymbox{\hyperlink{class_modular_architecture_1_1_editor_1_1_script_templates}{Modular\+Architecture.\+Editor.\+Script\+Templates}} }{\pageref{class_modular_architecture_1_1_editor_1_1_script_templates}}{}
+\item\contentsline{section}{\doxymbox{\hyperlink{class_modular_architecture_1_1_data_1_1_string_reference}{Modular\+Architecture.\+Data.\+String\+Reference}} }{\pageref{class_modular_architecture_1_1_data_1_1_string_reference}}{}
+\item\contentsline{section}{\doxymbox{\hyperlink{class_modular_architecture_1_1_data_1_1_string_variable}{Modular\+Architecture.\+Data.\+String\+Variable}} }{\pageref{class_modular_architecture_1_1_data_1_1_string_variable}}{}
+\end{DoxyCompactList}

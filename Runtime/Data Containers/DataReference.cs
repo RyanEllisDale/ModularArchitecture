@@ -1,11 +1,12 @@
 // Dependancies :
 using System;
+using ModularArchitecture.Conditions;
 
 // Resources :
 // https://youtu.be/raQ3iHhE_Kk?si=vPNxUAdLeB1wycK_
 // https://learn.microsoft.com/en-us/dotnet/api/system.icomparable-1?view=net-10.0
 
-namespace ModularArchitecture
+namespace ModularArchitecture.Data
 {
     /// <summary>
     /// DataReference contains either a constant value or points to a data container asset in the project <br/>
