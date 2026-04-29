@@ -19,22 +19,22 @@
         {
           "displayName": "Data Sample",
           "description": "A Tiny sample showing the general idea behind data variables and data referencing, containing a simple scene where both a cube and a timer respond to the same persistent data asset independantly in real-time.",
-          "path": "Samples/Data"
+          "path": "Samples/Data Sample"
         },
         {
           "displayName": "Condition Sample",
           "description": "Condition Sample is a demonstration of how you can make modular conditions and behaviours based on condition variables, it contains a simple scene with some basic UI, and an evaluation function. It's recomended you visit Data Sample before looking at this.",
-          "path": "Samples/Conditions"
+          "path": "Samples/Conditions Sample"
         },
         {
           "displayName": "Enums Sample",
           "description": "Enum Sample is a small sample that shows off the potential implementations of extendable enumerators in Unity ( in pure theory ), and asks you to visage how you could create modular abilities from the concept of being able to change enums on the fly.",
-          "path": "Samples/Enums"
+          "path": "Samples/Enums Sample"
         },
         {
           "displayName": "Events Sample",
           "description": "Events sample is a bit of a bigger scene, containing several events and listeners that shows how you can escape dependancy hell by utilising data driven event calling and self-listening. This scene contains two example scripts, basic ui, and 2 example events.",
-          "path": "Samples/Events"
+          "path": "Samples/Events Sample"
         }
       ]
 }
