@@ -33,6 +33,13 @@ var annotated_dup =
         [ "GameEventListenerScript", "class_modular_architecture_1_1_events_1_1_game_event_listener_script.html", "class_modular_architecture_1_1_events_1_1_game_event_listener_script" ]
       ] ]
     ] ],
+    [ "ConditionSample", "class_condition_sample.html", "class_condition_sample" ],
+    [ "DataRotationSample", "class_data_rotation_sample.html", "class_data_rotation_sample" ],
+    [ "DataTimerSample", "class_data_timer_sample.html", "class_data_timer_sample" ],
+    [ "EnumSample", "class_enum_sample.html", "class_enum_sample" ],
+    [ "EventSwapSample", "class_event_swap_sample.html", "class_event_swap_sample" ],
+    [ "EventToggleSample", "class_event_toggle_sample.html", "class_event_toggle_sample" ],
+    [ "ExtendableEnumExample", "class_extendable_enum_example.html", null ],
     [ "ExtendEnumAttribute", "class_extend_enum_attribute.html", "class_extend_enum_attribute" ],
     [ "ExtendEnumDrawer", "class_extend_enum_drawer.html", "class_extend_enum_drawer" ]
 ];

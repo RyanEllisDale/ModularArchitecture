@@ -2,7 +2,7 @@
     "name": "com.ryanellisdale.modular-architecture",
     "displayName": "Modular Architecture",
     "version": "1.0.0",
-    "description": "Modular Objects and Scripts",
+    "description": "Modular Architecture is a lightweight Unity package that provides reusable, data-driven building blocks for game development. It helps reduce tight coupling in traditional MonoBehaviour workflows by introducing modular systems for data, events, conditions, and enums. The goal is to make Unity projects more flexible, scalable, and easier to extend through composable, designer-friendly architecture.",
     "documentationUrl": "https://ryanellisdale.github.io/ModularArchitecture/",
     "unity": "2019.1",
     "dependencies": {},

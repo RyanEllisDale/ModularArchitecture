@@ -41,8 +41,8 @@ var NAVTREE =
     [ "How-To-Use", "_how-_to-_use.html", null ],
     [ "LICENSE", "md__l_i_c_e_n_s_e.html", null ],
     [ "Third Party Notices", "md__third_01_party_01_notices.html", [
-      [ "Extendable Enums", "md__third_01_party_01_notices.html#autotoc_md28", null ],
-      [ "Doxygen Awesome CSS", "md__third_01_party_01_notices.html#autotoc_md29", null ]
+      [ "Extendable Enums", "md__third_01_party_01_notices.html#autotoc_md49", null ],
+      [ "Doxygen Awesome CSS", "md__third_01_party_01_notices.html#autotoc_md50", null ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ]

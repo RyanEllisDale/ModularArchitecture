@@ -137,17 +137,160 @@ Ensure that you copy only the package’s root folder — the one that directly 
 
 @page How-To-Use 
 
-## Sample / Demo Installation
-Sample Installation
+Modular architecture comes with 4 main features :
+- Data Variables / References
+- Modular Conditions
+- Extendable Enums
+- Events
+
+In this page I will briefly talk about how these can be used. 
+It is reccomended you have been through the Installation Guide ( @ref Installation "Here" ) before reading through this. 
+
+## Samples
+
+Each of the 4 Main features of Modular architecture has it's own sample piece / demostration that shows off the functionality / theory behind it. These samples can be installed by opening up the package-manager window in your Unity project, finding the Modular Architecture package, moving to the samples view and importing the relevant sample(s) you want. All the samples are designed to be small in scope and easy to follow along with.
 
 ## Conditions
 
+The `Condition` system allows you to create simple logic checks without writing code by comparing two values using a chosen operator.
+
+### Setup
+
+1. Choose a **Value Type** (Int, Float, String, or Bool).
+2. Assign a **Subject** (the current value).
+3. Assign a **Target** (the value to compare against).
+4. Select a **Comparison** type (e.g. Equal, Greater, Less).
+
+### Example
+
+To check if a player’s health is low:
+
+- Type: `Float`
+- Subject: `PlayerHealth` (Data Reference)
+- Target: `30`
+- Comparison: `Less`
+
+This represents: `PlayerHealth < 30`
+
+### Usage
+
+Call: condition.Evaluate()
+This returns `true` or `false` depending on whether the condition is met.
+
+### Common Use Cases
+
+- Triggering events (e.g. player health is low)
+- Unlocking actions (e.g. score ≥ required amount)
+- AI decision making
+- UI updates (e.g. show warning states)
+
+Conditions are fully data-driven, meaning they can be configured in the Inspector and reused across systems without modifying code.
+
 ## Data
+
+## How to Use Data References
+
+The data system allows you to use either **constant values** or **shared data assets** interchangeably, without changing your code.
+
+### Setup
+
+Choose how the value is provided:
+   - **Constant** → uses a fixed value set in the Inspector
+   - **Variable** → references a `DataContainer` asset
+
+### Example
+
+```csharp
+public FloatReference speed;
+```
+
+Set `Use Constant` = true → speed = 5
+OR
+Set `Use Constant` = false → assign a `Float Variable` asset
+
+### Usage
+
+References / Variables are just data values, you can reference them directly with `[Reference].value` or implicity `=[Reference]`,
+These values are also modifiable even when in the data asset ( data variable ).
 
 ## Events
 
+## How to Use Game Events
+
+The event system allows different parts of your game to communicate without being directly connected.
+
+A `GameEvent` is a reusable asset that can be triggered from anywhere, and all registered listeners will respond automatically.
+
+### Setup
+
+1. Create a `GameEvent` asset (e.g. `PlayerDied`, `ButtonPressed`)
+2. Add a `GameEventListener` to any object that should react
+3. Define a response using a `UnityEvent` or method call
+4. Link the listener to the event
+
+### Raising an Event
+
+Trigger the event from code or inspector:
+gameEvent.Raise();
+
+This will notify all subscribed listeners.
+
+### Listening to an Event
+
+A listener automatically subscribes when enabled:
+
+- OnEnable → subscribes to the event  
+- OnDisable → unsubscribes from the event  
+
+When the event is raised, the listener executes its response.
+
+### Example
+
+- `PlayerDied` → show game over UI, play sound, pause game  
+- `DoorOpened` → play animation, unlock area  
+- `ButtonPressed` → start level or trigger action  
+
+### Usage
+
+Game Events are used to:
+
+- Decouple systems (UI, gameplay, audio, etc.)
+- Trigger multiple reactions from a single action
+- Remove direct references between objects
+- Build flexible event-driven gameplay flow
+
+### Summary
+
+Game Events act as global signals that systems can react to. Instead of calling each other directly, objects simply respond when an event is raised, making the project more modular and scalable.
+
 ## Enums
 
+## How to Use Extendable Enums
+
+The enum system allows traditional C# enums to be represented as ScriptableObject assets, making them more flexible and designer-friendly.
+Instead of being hardcoded in code, enum values can be created, referenced, and swapped like data.
+
+### Setup
+
+Right click in your project asset browser, navigate to the create menu, in there you will find Modular Architecture>Enums>Create New Enum.
+This is how we define new enums, when you've created an enum it will be compiled into that same context asset browser. 
+
+
+This behaves like a normal enum but is stored as data.
+
+### Example Use Cases
+
+- Game states (Menu, Gameplay, Paused)
+- Enemy types (Melee, Ranged, Boss)
+- Item categories (Weapon, Armor, Consumable)
+- AI modes or behavior types
+
+### Benefits
+
+- Enums can be extended without changing code
+- Designers can add or modify values through assets
+- Systems can reference enum data instead of hardcoded values
+- Works well with data-driven architectures (conditions, events, references)
 
 ## Thank You For Reading 
 
