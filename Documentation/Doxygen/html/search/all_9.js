@@ -9,6 +9,7 @@ var searchData=
   ['gethashcode_6',['GetHashCode',['../class_modular_architecture_1_1_data_1_1_data_reference_base.html#a540a45378f8d451c653c44f44cfe7e8d',1,'ModularArchitecture::Data::DataReferenceBase']]],
   ['getpropertyheight_7',['GetPropertyHeight',['../class_modular_architecture_1_1_editor_1_1_condition_drawer.html#a725698d1faed18a777e934ea2eebda2b',1,'ModularArchitecture.Editor.ConditionDrawer.GetPropertyHeight()'],['../class_modular_architecture_1_1_editor_1_1_data_reference_drawer.html#a90d009f834e0f77cdfc86d5cbb36fca7',1,'ModularArchitecture.Editor.DataReferenceDrawer.GetPropertyHeight()']]],
   ['getwindowsize_8',['GetWindowSize',['../class_extend_enum_drawer_1_1_new_value_popup.html#af2d0fe2e1c0e156e1d63bff5146315c0',1,'ExtendEnumDrawer::NewValuePopup']]],
-  ['greater_9',['Greater',['../namespace_modular_architecture_1_1_conditions.html#a2093dfbc784828bc207f178fd23d883ba8768a6821cd735aea4f5b0df88c1fc6a',1,'ModularArchitecture::Conditions']]],
-  ['greaterequal_10',['GreaterEqual',['../namespace_modular_architecture_1_1_conditions.html#a2093dfbc784828bc207f178fd23d883ba758b05d899def79c9eb864ad4f96be1f',1,'ModularArchitecture::Conditions']]]
+  ['git_9',['Package Manager — Git',['../_installation.html#autotoc_md18',1,'']]],
+  ['greater_10',['Greater',['../namespace_modular_architecture_1_1_conditions.html#a2093dfbc784828bc207f178fd23d883ba8768a6821cd735aea4f5b0df88c1fc6a',1,'ModularArchitecture::Conditions']]],
+  ['greaterequal_11',['GreaterEqual',['../namespace_modular_architecture_1_1_conditions.html#a2093dfbc784828bc207f178fd23d883ba758b05d899def79c9eb864ad4f96be1f',1,'ModularArchitecture::Conditions']]]
 ];

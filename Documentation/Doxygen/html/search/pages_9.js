@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['master_20links_0',['Master Links',['../index.html#autotoc_md16',1,'']]],
-  ['modular_20architecture_1',['Modular Architecture',['../index.html',1,'']]]
+  ['home_0',['Modular Architecture - Home',['../index.html',1,'']]],
+  ['how_20to_20use_1',['How-To-Use',['../_how-_to-_use.html',1,'']]]
 ];

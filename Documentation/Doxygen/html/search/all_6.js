@@ -5,7 +5,9 @@ var searchData=
   ['datareference_2d1_2dg_2',['DataReference-1-g',['../class_modular_architecture_1_1_data_1_1_data_reference-1-g.html',1,'ModularArchitecture::Data']]],
   ['datareferencebase_3',['DataReferenceBase',['../class_modular_architecture_1_1_data_1_1_data_reference_base.html',1,'ModularArchitecture::Data']]],
   ['datareferencedrawer_4',['DataReferenceDrawer',['../class_modular_architecture_1_1_editor_1_1_data_reference_drawer.html',1,'ModularArchitecture::Editor']]],
-  ['display_5',['display',['../class_extend_enum_attribute.html#ad8a1f4cb8158cfc57de4156bc3f1b169',1,'ExtendEnumAttribute']]],
-  ['doxygen_6',['Doxygen',['../md__documentation_2_credits.html#autotoc_md7',1,'']]],
-  ['doxygen_20awesome_20css_7',['Doxygen Awesome CSS',['../md__documentation_2_credits.html#autotoc_md8',1,'Doxygen Awesome CSS'],['../md__third_01_party_01_notices.html#autotoc_md20',1,'Doxygen Awesome CSS']]]
+  ['disk_5',['Package Manager Disk',['../_installation.html#autotoc_md17',1,'']]],
+  ['display_6',['display',['../class_extend_enum_attribute.html#ad8a1f4cb8158cfc57de4156bc3f1b169',1,'ExtendEnumAttribute']]],
+  ['documentation_7',['Documentation',['../index.html#autotoc_md13',1,'']]],
+  ['doxygen_8',['Doxygen',['../md__documentation_2_credits.html#autotoc_md7',1,'']]],
+  ['doxygen_20awesome_20css_9',['Doxygen Awesome CSS',['../md__documentation_2_credits.html#autotoc_md8',1,'Doxygen Awesome CSS'],['../md__third_01_party_01_notices.html#autotoc_md29',1,'Doxygen Awesome CSS']]]
 ];

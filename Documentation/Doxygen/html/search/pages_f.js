@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['tests_0',['Tests',['../index.html#autotoc_md15',1,'']]],
-  ['thank_20you_20for_20reading_1',['Thank You For Reading',['../index.html#autotoc_md17',1,'']]],
-  ['third_20party_20notices_2',['Third Party Notices',['../md__third_01_party_01_notices.html',1,'']]]
+  ['package_20manager_0',['Package Manager',['../_installation.html#autotoc_md16',1,'']]],
+  ['package_20manager_20—_20git_1',['Package Manager — Git',['../_installation.html#autotoc_md18',1,'']]],
+  ['package_20manager_20disk_2',['Package Manager Disk',['../_installation.html#autotoc_md17',1,'']]],
+  ['package_20structure_3',['Package Structure',['../index.html#autotoc_md12',1,'']]],
+  ['party_20notices_4',['Third Party Notices',['../md__third_01_party_01_notices.html',1,'']]]
 ];

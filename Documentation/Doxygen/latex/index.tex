@@ -1,45 +1,71 @@
-\chapter{Modular Architecture }
-\hypertarget{index}{}\label{index}\index{Modular Architecture@{Modular Architecture}}
-\hypertarget{index_autotoc_md9}{}\doxysubsection{\texorpdfstring{Summary}{Summary}}\label{index_autotoc_md9}
+\chapter{Modular Architecture -\/ Home }
+\hypertarget{index}{}\label{index}\index{Modular Architecture -\/ Home@{Modular Architecture -\/ Home}}
+\hypertarget{index_autotoc_md9}{}\doxysubsection{\texorpdfstring{Overview}{Overview}}\label{index_autotoc_md9}
+Modular architecture is a small Unity package designed to provide structured re-\/usable data-\/driven pieces of code that can be used and expanded upon in your own Unity projects. Unity\textquotesingle{}s codebase is inherently quite tightly coupled with the reign of Mono Behaviour and whilst it works and the workflow is very simple it has shortcomings. Throughout the years more and more Unity developers have been finding success with encorporating more modular and composite based designs into their Unity work-\/flows.
+
+Some Excellent Resources and the inspiration behind this package :\+
+\begin{DoxyItemize}
+\item \href{https://www.youtube.com/watch?v=raQ3iHhE_Kk&t=1530s}{\texttt{Game Architecture with Scriptable Objects}}
+\item \href{https://www.youtube.com/watch?v=6vmRwLYWNRo}{\texttt{Overthrowing the Mono\+Behaviour Tyranny}}
+\end{DoxyItemize}\hypertarget{index_autotoc_md10}{}\doxysubsubsection{\texorpdfstring{The Benefits to Modularity In Unity}{The Benefits to Modularity In Unity}}\label{index_autotoc_md10}
 
 \begin{DoxyItemize}
-\item Overview
-\item Features
-\item Simple Code Explanations
-\item Master Links
-\end{DoxyItemize}\hypertarget{index_autotoc_md10}{}\doxysubsection{\texorpdfstring{Overview}{Overview}}\label{index_autotoc_md10}
-Package\+Template is a minimilistic but complete package base intended to be used as a base for smaller packages or improved package templates /\+ structures. It can be installed by loading it from the disk in the Package Manager menu or by directly importing it into a Unity Project\textquotesingle{}s Package folder.\hypertarget{index_autotoc_md11}{}\doxysubsection{\texorpdfstring{Features}{Features}}\label{index_autotoc_md11}
+\item Fewer dependencies — Mono\+Behaviour‑heavy setups often create tangled scene references; modular systems stay clean and isolated
+\item Safer iteration — swapping or updating modules (input, UI, audio, etc.) won’t impact unrelated features
+\item Easier testing — data‑driven modules avoid scene‑reset issues and reduce dependency headaches
+\item Better organization — Unity’s asset workflow pairs naturally with Scriptable\+Objects and persistent data
+\item Memory efficiency — multiple objects can read from a single data asset, avoiding unnecessary duplication
+\end{DoxyItemize}\hypertarget{index_autotoc_md11}{}\doxysubsubsection{\texorpdfstring{Features}{Features}}\label{index_autotoc_md11}
 
 \begin{DoxyItemize}
-\item A Runtime Component Example /\+ Base ({\ttfamily Runtime/\+\+Runtime\+Example}) ~\newline
+\item Create-\/able data assets for IComparable Data Types
+\item Modular data game event system
+\item Modular data conditions system ( return a {\ttfamily operator} b ) ~\newline
 
-\item An Editor Script Example /\+ Base ({\ttfamily Editor/\+\+Editor\+Example}) ~\newline
+\item Extendable Enums (Cory Koseck) and Extendable Enum Data Sets
+\item Custom property drawers
+\item Samples and Demos
+\end{DoxyItemize}\hypertarget{index_autotoc_md12}{}\doxysubsection{\texorpdfstring{Package Structure}{Package Structure}}\label{index_autotoc_md12}
+I created this package from the base of an earlier project I had made called Package\+Template which can be found at :\+ \href{https://github.com/RyanEllisDale/PackageTemplate}{\texttt{https:\+/\+/\+github.\+com/\+\+Ryan\+Ellis\+Dale/\+\+Package\+Template}} in both of these packages I have attempted to follow the established Unity and community standards. The resources I used for my packaging layout and code standards can be found at :\+
 
-\item Automated Tests For Edit\+Mode And Play\+Mode ({\ttfamily Tests/\+\+Runtime/\+\+Runtime\+Test\+Example} /\+ {\ttfamily Tests/\+\+Editor/\+\+Editor\+Test\+Example})
-\item A Sample Scene Showing Off Implementation ({\ttfamily Samples/\+\+Sample\+Scene/\+\+Package\+Template\+Sample\+Scene})
-\end{DoxyItemize}\hypertarget{index_autotoc_md12}{}\doxysubsection{\texorpdfstring{Code}{Code}}\label{index_autotoc_md12}
-\hypertarget{index_autotoc_md13}{}\doxysubsubsection{\texorpdfstring{Runtime Example}{Runtime Example}}\label{index_autotoc_md13}
-There are only 4 scripts in this template and they all revolve around {\ttfamily Runtime\+Example}. public class Runtime\+Example :\+ Mono\+Behaviour \{ \+[Serialize\+Field]\+ public string example = "{}\+Example Value"{}; public void Start() \{ Debug.\+Log(example); \} \}
 
-Runtime\+Example is extremely simple foundation :\+ it\textquotesingle{}s a component that takes and prints a single string variable. Runtime\+Example\textquotesingle{}s Start() function is important because it serves as the example method to validate the Editor and Tests are working.\hypertarget{index_autotoc_md14}{}\doxysubsubsection{\texorpdfstring{Editor Example}{Editor Example}}\label{index_autotoc_md14}
-\+[Custom\+Editor(typeof(\+Runtime\+Example))]\+ public class Editor\+Example :\+ Unity\+Editor.\+Editor \{ public override void On\+Inspector\+GUI() \{ Draw\+Default\+Inspector(); Runtime\+Example subject = (Runtime\+Example)target; if (GUILayout.\+Button("{}\+Print Example Message"{})) \{ Debug.\+Log(subject.\+example); \} \} \}
+\begin{DoxyItemize}
+\item Unity’s Official Package Layout:\+ \href{https://docs.unity3d.com/6000.3/Documentation/Manual/cus-layout.html}{\texttt{https:\+/\+/\+docs.\+unity3d.\+com/\+6000.\+3/\+\+Documentation/\+\+Manual/\+cus-\/layout.\+html}}
+\item Unity’s Code Standard Tips:\+ \href{https://unity.com/how-to/naming-and-code-style-tips-c-scripting-unity}{\texttt{https:\+/\+/\+unity.\+com/\+how-\/to/\+naming-\/and-\/code-\/style-\/tips-\/c-\/scripting-\/unity}}
+\item uvasgd’s Unity Documentation Tips:\+ \href{https://uvasgd.github.io/sgd-docs/unity/documentation.html}{\texttt{https:\+/\+/\+uvasgd.\+github.\+io/\+sgd-\/docs/\+unity/\+documentation.\+html}}
+\end{DoxyItemize}
 
-Editor\+Example takes the Runtime\+Example foundation and add\textquotesingle{}s a button to it\textquotesingle{}s inspector /\+ editor. When pressed the button will log whatever the Runtime\+Example\textquotesingle{}s example value string variable is. The sample scene comes with a prefab that shows off the button and it\textquotesingle{}s functionality to help show how the editor links to the component.\hypertarget{index_autotoc_md15}{}\doxysubsubsection{\texorpdfstring{Tests}{Tests}}\label{index_autotoc_md15}
-public class Edit\+Mode\+Example\+Test \{ \+[Test]\+ /\+/\+ Edit Mode Test public void Test\+Runtime\+Example\+Edit\+Mode() \{ /\+/\+ Creating Game Object and Runtime Script :\+ Game\+Object test\+Game\+Object = new Game\+Object(); Runtime\+Example runtime\+Example\+Script = test\+Game\+Object.\+Add\+Component$<$\+Runtime\+Example$>$();
+The changelog follows Unity and {\itshape Keep a Change\+Log} conventions which can be found at :\+
 
-/\+/\+ Testing Runtime Script :\+ runtime\+Example\+Script.\+Start(); Assert.\+Is\+Not\+Null(runtime\+Example\+Script); Debug.\+Log("{}\+Test Finished"{}); \} \} public class Runtime\+Test\+Example \{ \+[Unity\+Test]\+ /\+/\+ Play Mode Tests public IEnumerator Test\+Runtime\+Example\+Play\+Mode() \{ /\+/\+ Create the object and Script :\+ Game\+Object test\+Game\+Object = new Game\+Object(); Runtime\+Example runtime\+Example\+Script = test\+Game\+Object.\+Add\+Component$<$\+Runtime\+Example$>$();
 
-/\+/\+ Run the Script :\+ runtime\+Example\+Script.\+Start(); yield return null;
+\begin{DoxyItemize}
+\item Unity Changelog Guidelines:\+ \href{https://docs.unity3d.com/6000.3/Documentation/Manual/cus-changelog.html}{\texttt{https:\+/\+/\+docs.\+unity3d.\+com/\+6000.\+3/\+\+Documentation/\+\+Manual/\+cus-\/changelog.\+html}} ~\newline
 
-/\+/\+ Cleanup :\+ Assert.\+Is\+Not\+Null(runtime\+Example\+Script); Object.\+Destroy(test\+Game\+Object); Debug.\+Log("{}\+Test Finished"{}); \} \}
+\item Keep a Changelog:\+ \href{https://keepachangelog.com/en/1.1.0/}{\texttt{https:\+/\+/\+keepachangelog.\+com/\+en/\+1.\+1.\+0/\+}}
+\end{DoxyItemize}
 
-There are two tests in this template, an Edit Mode Test {\ttfamily \+[Test]\+} and a Play Mode Test {\ttfamily \+[Unity\+Test]\+} Both of them do the same thing:\+ They create a game object, attach a Runtime\+Example script then call the Start() method of that script. However the Edit Mode test can be run in the editor and thus is limited by what can be done in the Editor only whilst the play mode test will create a temporary scene instance and then run the test as if it was normal play.\hypertarget{index_autotoc_md16}{}\doxysubsection{\texorpdfstring{Master Links}{Master Links}}\label{index_autotoc_md16}
-This pacakge template aims to be provide the structure /\+ layout for all fundemantal package elements whilst being bare and minimilistic, I\textquotesingle{}m hoping to use it as a building base for many small projects in the future but it could definitely be expanded upon and/\+or improved. If you would like to add to my template or build a better one from scratch here are all the resources I found useful whilst developing this.
+Throughout the whole project, Semantic versioning is used, and a generally consistent Markdown styling is kept, A guide to both can be found at :\+
 
-\href{https://youtu.be/mgsLb3TKljk?si=hM2qi7mbiC8Qhbca}{\texttt{Unity Package Youtube Tutorial}} \href{https://docs.unity3d.com/Manual/PackagesList.html}{\texttt{Unity Package Documentation}} \href{https://docs.unity3d.com/6000.3/Documentation/Manual/cus-layout.html}{\texttt{Unity Package Layout}} \href{https://docs.unity3d.com/2020.3/Documentation/Manual/CustomPackages.html}{\texttt{Unity Package Creation}} \href{https://docs.unity3d.com/2020.3/Documentation/Manual/upm-manifestPkg.html}{\texttt{Unity Package Manifest}}
 
-\href{https://www.youtube.com/watch?v=OhwP5TYgucM}{\texttt{Infallible Code Package Youtube Tutorial}} \href{https://www.youtube.com/watch?v=rmP8vAuuhoA}{\texttt{Llam\+Academy Namespaces Youtube Tutorial}} \href{https://youtu.be/qprZHOPu2OI?si=Pz4Td5j5_BV4c4WE}{\texttt{Llam\+Academy Assembly Definition Youtube Tutorial}}
+\begin{DoxyItemize}
+\item Semantic Versioning:\+ \href{https://semver.org/spec/v2.0.0.html}{\texttt{https:\+/\+/\+semver.\+org/\+spec/\+v2.\+0.\+0.\+html}} ~\newline
 
-\href{https://keepachangelog.com/en/1.1.0/}{\texttt{Keep A Changelog Website}} \href{https://semver.org/spec/v2.0.0.html}{\texttt{Semantic Versioning}} \href{https://markdownguide.offshoot.io/basic-syntax/}{\texttt{Markdown Syntax}}
+\item Markdown Syntax Guide:\+ \href{https://markdownguide.offshoot.io/basic-syntax/}{\texttt{https:\+/\+/\+markdownguide.\+offshoot.\+io/\+basic-\/syntax/\+}}
+\end{DoxyItemize}\hypertarget{index_autotoc_md13}{}\doxysubsection{\texorpdfstring{Documentation}{Documentation}}\label{index_autotoc_md13}
+The documentation for this package is generated using Doxygen, styled with the doxygen‑awesome theme, and built directly from the XML comments within the codebase. This ensures that the documentation stays accurate, up‑to‑date, and closely aligned with the implementation. It also allows contributors to improve the docs simply by enhancing the inline comments in the source files. If you find any errors in the codebase feel free to toy around as much as you want and send me your findings, I\textquotesingle{}d love to hear from you.
 
-\href{https://github.com/RyanEllisDale/PackageTemplate}{\texttt{Git\+Hub Repo}}\hypertarget{index_autotoc_md17}{}\doxysubsection{\texorpdfstring{Thank You For Reading}{Thank You For Reading}}\label{index_autotoc_md17}
+
+\begin{DoxyItemize}
+\item Doxygen :\+ \href{https://www.doxygen.nl/}{\texttt{https:\+/\+/\+www.\+doxygen.\+nl/\+}}
+\item doxygen-\/awesome-\/css :\+ \href{https://github.com/jothepro/doxygen-awesome-css}{\texttt{https:\+/\+/\+github.\+com/\+jothepro/\+doxygen-\/awesome-\/css}}
+\end{DoxyItemize}\hypertarget{index_autotoc_md14}{}\doxysubsection{\texorpdfstring{Thank You For Reading}{Thank You For Reading}}\label{index_autotoc_md14}
+\hypertarget{index_autotoc_md15}{}\doxysubsubsection{\texorpdfstring{{\ttfamily Suggested Readings}}{{\ttfamily Suggested Readings}}}\label{index_autotoc_md15}
+\doxysectlink{_installation}{How to install the package}{0}
+
+\doxysectlink{_how-_to-_use}{How to use the package}{0}
+
+\href{https://ryanellisdale.github.io/ModularArchitecture/md__documentation_2_credits.html}{\texttt{Credits}}
+
+\href{https://ryanellisdale.github.io/ModularArchitecture/md__third_01_party_01_notices.html}{\texttt{Third Party Notices}}
+
+\href{https://ryanellisdale.github.io/ModularArchitecture/md__l_i_c_e_n_s_e.html}{\texttt{Licensing}} 

@@ -25,17 +25,8 @@
 var NAVTREE =
 [
   [ "Modular Architecture", "index.html", [
+    [ "Modular Architecture - Home", "index.html", null ],
     [ "Changelog", "md__c_h_a_n_g_e_l_o_g.html", [
-      [ "Summary", "index.html#autotoc_md9", null ],
-      [ "Overview", "index.html#autotoc_md10", null ],
-      [ "Features", "index.html#autotoc_md11", null ],
-      [ "Code", "index.html#autotoc_md12", [
-        [ "Runtime Example", "index.html#autotoc_md13", null ],
-        [ "Editor Example", "index.html#autotoc_md14", null ],
-        [ "Tests", "index.html#autotoc_md15", null ]
-      ] ],
-      [ "Master Links", "index.html#autotoc_md16", null ],
-      [ "Thank You For Reading", "index.html#autotoc_md17", null ],
       [ "About", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md1", null ],
       [ "[1.0.0] - Initial Release", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md3", [
         [ "Added", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md4", null ]
@@ -46,10 +37,12 @@ var NAVTREE =
       [ "Doxygen", "md__documentation_2_credits.html#autotoc_md7", null ],
       [ "Doxygen Awesome CSS", "md__documentation_2_credits.html#autotoc_md8", null ]
     ] ],
+    [ "Installation", "_installation.html", null ],
+    [ "How-To-Use", "_how-_to-_use.html", null ],
     [ "LICENSE", "md__l_i_c_e_n_s_e.html", null ],
     [ "Third Party Notices", "md__third_01_party_01_notices.html", [
-      [ "Extendable Enums", "md__third_01_party_01_notices.html#autotoc_md19", null ],
-      [ "Doxygen Awesome CSS", "md__third_01_party_01_notices.html#autotoc_md20", null ]
+      [ "Extendable Enums", "md__third_01_party_01_notices.html#autotoc_md28", null ],
+      [ "Doxygen Awesome CSS", "md__third_01_party_01_notices.html#autotoc_md29", null ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ]
@@ -70,7 +63,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"_how-_to-_use.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';
