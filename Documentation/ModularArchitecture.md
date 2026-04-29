@@ -135,14 +135,18 @@ Ensure that you copy only the package’s root folder — the one that directly 
 
 [Licensing](https://ryanellisdale.github.io/ModularArchitecture/md__l_i_c_e_n_s_e.html)
 
-@page How-To-Use
+@page How-To-Use 
 
-### 
+## Sample / Demo Installation
+Sample Installation
 
+## Conditions
 
+## Data
 
+## Events
 
-
+## Enums
 
 
 ## Thank You For Reading 
