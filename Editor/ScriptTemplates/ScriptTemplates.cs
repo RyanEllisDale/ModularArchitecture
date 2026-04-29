@@ -9,7 +9,7 @@ namespace ModularArchitecture.Editor
         public static void CreateEnumScript()
         {
             ProjectWindowUtil.CreateScriptAssetFromTemplateFile(
-                "Packages/ModularArchitecture/Editor/ScriptTemplates/Enum Script Template.txt",
+                "Packages/com.ryanellisdale.modular-architecture/Editor/ScriptTemplates/Enum Script Template.txt",
                 "New Enum.cs"
             );
         }
