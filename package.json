@@ -3,7 +3,7 @@
     "displayName": "Modular Architecture",
     "version": "1.0.0",
     "description": "Modular Objects and Scripts",
-    "documentationUrl": "file:Documentation~/Doxygen/html/index.html",
+    "documentationUrl": "https://ryanellisdale.github.io/ModularArchitecture/",
     "unity": "2019.1",
     "dependencies": {},
     "license": "MIT",
