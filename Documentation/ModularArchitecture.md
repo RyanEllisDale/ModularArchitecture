@@ -1,7 +1,5 @@
 @mainpage Modular Architecture
 
-# Package Template - Documentation
-
 ## Summary
 - Overview
 - Features
