@@ -137,75 +137,13 @@ Ensure that you copy only the package’s root folder — the one that directly 
 
 @page How-To-Use
 
-### Runtime Example
-There are only 4 scripts in this template and they all revolve around `RuntimeExample`. 
-public class RuntimeExample : MonoBehaviour
-{
-    [SerializeField] public string example = "Example Value";
-    public void Start()
-    {
-        Debug.Log(example);
-    }
-}
+### 
 
-RuntimeExample is extremely simple foundation :
-it's a component that takes and prints a single string variable. RuntimeExample's Start() function is important because it serves as the example method to validate the Editor and Tests are working. 
 
-### Editor Example
-[CustomEditor(typeof(RuntimeExample))]
-public class EditorExample : UnityEditor.Editor
-{
-    public override void OnInspectorGUI()
-    {
-        DrawDefaultInspector();
-        RuntimeExample subject = (RuntimeExample)target;
-        if (GUILayout.Button("Print Example Message"))
-        {
-            Debug.Log(subject.example);
-        }
-    }
-}
 
-EditorExample takes the RuntimeExample foundation and add's a button to it's inspector / editor. When pressed the button will log whatever the RuntimeExample's example value string variable is. The sample scene comes with a prefab that shows off the button and it's functionality to help show how the editor links to the component. 
 
-### Tests
-public class EditModeExampleTest
-{
-    [Test] // Edit Mode Test
-    public void TestRuntimeExampleEditMode()
-    {
-        // Creating Game Object and Runtime Script : 
-        GameObject testGameObject = new GameObject();
-        RuntimeExample runtimeExampleScript = testGameObject.AddComponent<RuntimeExample>();
-        
-        // Testing Runtime Script : 
-        runtimeExampleScript.Start();
-        Assert.IsNotNull(runtimeExampleScript);
-        Debug.Log("Test Finished");
-    }
-}
-public class RuntimeTestExample
-{
-    [UnityTest] // Play Mode Tests
-    public IEnumerator TestRuntimeExamplePlayMode()
-    {
-        // Create the object and Script : 
-        GameObject testGameObject = new GameObject();
-        RuntimeExample runtimeExampleScript = testGameObject.AddComponent<RuntimeExample>();
-        
-        // Run the Script : 
-        runtimeExampleScript.Start();
-        yield return null;
 
-        // Cleanup :
-        Assert.IsNotNull(runtimeExampleScript);
-        Object.Destroy(testGameObject);
-        Debug.Log("Test Finished");
-    }
-}
 
-There are two tests in this template, an Edit Mode Test `[Test]` and a Play Mode Test `[UnityTest]`
-Both of them do the same thing: They create a game object, attach a RuntimeExample script then call the Start() method of that script. However the Edit Mode test can be run in the editor and thus is limited by what can be done in the Editor only whilst the play mode test will create a temporary scene instance and then run the test as if it was normal play. 
 
 ## Thank You For Reading 
 
