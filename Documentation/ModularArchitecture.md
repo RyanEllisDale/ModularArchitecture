@@ -72,8 +72,7 @@ The modular architecture package can be added to your Unity project in three way
 
 ## Package Manager 
 
-You can access the Package Manager by opening your Unity project, selecting **Window** from the top menu bar, and choosing **Package Manager**.  
-In the top‑left corner of the Package Manager window, the **➕ (Add)** button allows you to install external packages.
+You can access the Package Manager by opening your Unity project, selecting **Window** from the top menu bar, and choosing **Package Manager**. In the top‑left corner of the Package Manager window, the Add button allows you to install external packages.
 
 This package supports two Package Manager installation methods:
 
