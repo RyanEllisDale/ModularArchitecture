@@ -24,7 +24,7 @@
         {
           "displayName": "Condition Sample",
           "description": "Condition Sample is a demonstration of how you can make modular conditions and behaviours based on condition variables, it contains a simple scene with some basic UI, and an evaluation function. It's recomended you visit Data Sample before looking at this.",
-          "path": "Samples/Conditions Sample"
+          "path": "Samples/Condition Sample"
         },
         {
           "displayName": "Enums Sample",
