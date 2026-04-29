@@ -14,12 +14,6 @@ var hierarchy =
       ] ]
     ] ],
     [ "MonoBehaviour", null, [
-      [ "ConditionSample", "class_condition_sample.html", null ],
-      [ "DataRotationSample", "class_data_rotation_sample.html", null ],
-      [ "DataTimerSample", "class_data_timer_sample.html", null ],
-      [ "EnumSample", "class_enum_sample.html", null ],
-      [ "EventSwapSample", "class_event_swap_sample.html", null ],
-      [ "EventToggleSample", "class_event_toggle_sample.html", null ],
       [ "ModularArchitecture.Events.GameEventListenerScript", "class_modular_architecture_1_1_events_1_1_game_event_listener_script.html", null ]
     ] ],
     [ "PopupWindowContent", null, [
@@ -41,9 +35,7 @@ var hierarchy =
         [ "ModularArchitecture.Data.IntVariable", "class_modular_architecture_1_1_data_1_1_int_variable.html", null ],
         [ "ModularArchitecture.Data.StringVariable", "class_modular_architecture_1_1_data_1_1_string_variable.html", null ]
       ] ],
-      [ "ModularArchitecture.Enums.ExtendableEnum< T >", "class_modular_architecture_1_1_enums_1_1_extendable_enum-1-g.html", [
-        [ "ExtendableEnumExample", "class_extendable_enum_example.html", null ]
-      ] ],
+      [ "ModularArchitecture.Enums.ExtendableEnum< T >", "class_modular_architecture_1_1_enums_1_1_extendable_enum-1-g.html", null ],
       [ "ModularArchitecture.Events.GameEvent", "class_modular_architecture_1_1_events_1_1_game_event.html", null ]
     ] ],
     [ "ModularArchitecture.Editor.ScriptTemplates", "class_modular_architecture_1_1_editor_1_1_script_templates.html", null ]

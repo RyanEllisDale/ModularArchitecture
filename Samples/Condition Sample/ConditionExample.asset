@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca041e27f3eb6744dbd25bb2a0802f0d, type: 3}
+  m_Name: ConditionExample
+  m_EditorClassIdentifier: 
+  value:
+    id: Test Comparison
+    _type: 0
+    _comparison: 4
+    _subject:
+      rid: 1250550019546415106
+    _target:
+      rid: 1250550019546415107
+  references:
+    version: 2
+    RefIds:
+    - rid: 1250550019546415106
+      type: {class: IntReference, ns: ModularArchitecture.Data, asm: com.ryanellisdale.modular-architecture}
+      data:
+        useConstant: 0
+        constantValue: 2
+        variable: {fileID: 11400000, guid: fb930bb6835a91846b7c4a66bac5e458, type: 2}
+    - rid: 1250550019546415107
+      type: {class: IntReference, ns: ModularArchitecture.Data, asm: com.ryanellisdale.modular-architecture}
+      data:
+        useConstant: 1
+        constantValue: 5
+        variable: {fileID: 0}
