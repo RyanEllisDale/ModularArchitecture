@@ -6,5 +6,5 @@ var searchData=
   ['float_3',['Float',['../namespace_modular_architecture_1_1_conditions.html#ad0e2b1d8c3838013293a28775e83d8c2a22ae0e2b89e5e3d477f988cc36d3272b',1,'ModularArchitecture::Conditions']]],
   ['floatreference_4',['FloatReference',['../class_modular_architecture_1_1_data_1_1_float_reference.html',1,'ModularArchitecture::Data']]],
   ['floatvariable_5',['FloatVariable',['../class_modular_architecture_1_1_data_1_1_float_variable.html',1,'ModularArchitecture::Data']]],
-  ['for_20reading_6',['Thank You For Reading',['../index.html#autotoc_md17',1,'']]]
+  ['for_20reading_6',['For Reading',['../index.html#autotoc_md14',1,'Thank You For Reading'],['../_installation.html#autotoc_md20',1,'Thank You For Reading'],['../_how-_to-_use.html#autotoc_md46',1,'Thank You For Reading']]]
 ];

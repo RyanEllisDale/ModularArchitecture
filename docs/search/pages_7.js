@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['initial_20release_0',['[1.0.0] - Initial Release',['../md__c_h_a_n_g_e_l_o_g.html#autotoc_md3',1,'']]]
+  ['features_0',['Features',['../index.html#autotoc_md11',1,'']]],
+  ['for_20reading_1',['For Reading',['../index.html#autotoc_md14',1,'Thank You For Reading'],['../_installation.html#autotoc_md20',1,'Thank You For Reading'],['../_how-_to-_use.html#autotoc_md46',1,'Thank You For Reading']]]
 ];
