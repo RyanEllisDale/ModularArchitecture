@@ -2,7 +2,7 @@
 
 Full API documentation is available here:
 
-- [API Reference](Documentation~/Doxygen/html/index.html)
+- [API Reference](https://ryanellisdale.github.io/ModularArchitecture/)
 
 # Modular Architecture
 
